@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "a7d4449e-79e8-4099-875c-48484202fb60",
+		"name": "customer-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8787/api/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"CUST1\",\r\n    \"name\": \"test\",\r\n    \"email\": \"test@test.com\",\r\n    \"phone\": \"987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/CUST1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers/CUST1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"CUST1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/CUST1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers/CUST1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"CUST1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sva\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/CUST1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdmEiLCJleHAiOjE2OTQ5ODc4MDAsImlhdCI6MTY5NDk2OTgwMH0.9d8LyPN2PGBuNzf9EnC4xi93yqAwUat3IHP8mMG2i-XTLYBin88u95fST3_Z2K7XenDPT37PZ_4NARu6fSi-6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"CUST1\",\r\n    \"name\": \"test\",\r\n    \"email\": \"test@test.com\",\r\n    \"phone\": \"987654881\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/customers/CUST1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"CUST1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
